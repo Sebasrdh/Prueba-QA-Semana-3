@@ -71,45 +71,279 @@
 
     <div class="d-flex flex-column min-vh-100">
         <div class="flex-fill">
-            <header class="banner text-center text-dark">
-                <h1>Plan de pruebas para trabajo Semana 3</h1>
+            <header class="banner text-center text-dark" style="margin-bottom: 2rem;">
+                <h1>Plan de Pruebas para Aplicación Web</h1>
+                <p><strong>Objetivo: </strong>Verificar que todas las funcionalidades de la versión web desarrollada por
+                    el equipo en la semana 3 funcionen como se espera, especialmente los módulos de login, creación,
+                    edición, eliminación, y validación de campos requeridos.</p>
+
+                <!-- Card Herramientas y Entorno -->
+                <div class="d-flex justify-content-center">
+                    <article class="col-md-6 mb-4">
+                        <div class="card rounded text-white" style="background-color: #54595f;">
+                            <header class="card-body">
+                                <h5 class="card-title" style="margin-bottom: 0;">Herramientas y Aplicativos</h5>
+                            </header>
+                            <footer class="card-body">
+                                <li><strong>Selenium WebDriver: </strong>Para automatizar las pruebas de interfaz en el
+                                    navegador.</li>
+                                <li><strong>Java: </strong>Lenguaje de programación para los scripts de prueba.</li>
+                                <li><strong>IDE: </strong>Visual Studio Code para escribir y ejecutar el código Java
+                                </li>
+                                <li><strong>Navegador: </strong>Google Chrome con la extensión de Selenium</li>
+                                <li><strong>Maven/Gradle: </strong>Para gestionar dependencias de Selenium y otros
+                                    componentes.</li>
+                            </footer>
+                        </div>
+
+
+                    </article>
+                </div>
             </header>
-        
-        
-            <section class="container d-flex justify-content-center align-items-center gap-3 mt-3">
-                <!-- Card Semana 3 -->
-                <article class="col-6">
-                    <figure class="card position-relative text-center" style="height: 430px; overflow: hidden;">
-                        <img class="position-absolute top-50 start-50 translate-middle w-100 h-100" src="img/QA_question1.jpg"
-                            alt="Imagen de Semana 3" style="object-fit: cover;">
-                        <figcaption
-                            class="d-flex flex-column align-items-center justify-content-center position-absolute top-50 start-50 translate-middle"
-                            style="padding: 20px; max-width: 80%; background-color: rgba(0, 0, 0, 0.5);">
-                            <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Semana 3</h1>
-                            <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp"
-                                href="intro_S3.html">Ver más</a>
-                        </figcaption>
-                    </figure>
-                </article>
-        
-                <!-- Card Semana 4 -->
-                <article class="col-6">
-                    <figure class="card position-relative text-center" style="height: 430px; overflow: hidden;">
-                        <img class="position-absolute top-50 start-50 translate-middle w-100 h-100" src="img/QA_question1.jpg"
-                            alt="Imagen de Semana 4" style="object-fit: cover;">
-                        <figcaption
-                            class="d-flex flex-column align-items-center justify-content-center position-absolute top-50 start-50 translate-middle"
-                            style="padding: 20px; max-width: 80%; background-color: rgba(0, 0, 0, 0.5);">
-                            <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Semana 4 (Aún no
-                                disponible)</h1>
-                            <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="">Ver
-                                más</a>
-                        </figcaption>
-                    </figure>
-                </article>
-            </section>
+
+            <div class="container">
+                <div class="row">
+                    <h1 class="text-center" style="margin-bottom: 2rem;">Casos de prueba</h1>
+                    <!-- Card Login -->
+                    <article class="col-6 mb-4">
+                        <div class="card rounded" style="background-color: #54595f; color: white;">
+                            <header class="card-body">
+                                <h5 class="card-title">Login</h5>
+                            </header>
+                            <section class="card-body">
+                                <p class="card-text">
+                                    El objetivo de esta prueba es validar el inicio de sesión con las credenciales
+                                    proporcionadas
+                                </p>
+                                <p><strong>Pasos:</strong></p>
+                                <li>Acceder a la página de login</li>
+                                <li>Ingresar usuario: user</li>
+                                <li>Ingresar contraseña: password</li>
+                                <li>Hacer clic en el botón "Login"</li>
+                                <p><strong>Resultado esperado: </strong> Inicio de sesión exitoso y visualización de la
+                                    Homepage.</p>
+                            </section>
+                        </div>
+                    </article>
+
+                    <!-- Card Gráfico -->
+                    <article class="col-6 mb-4">
+                        <div class="card rounded" style="background-color: #54595f; color: white;">
+                            <header class="card-body">
+                                <h5 class="card-title">Validación de Gráfico</h5>
+                            </header>
+                            <section class="card-body">
+                                <p class="card-text">
+                                    El objetivo de esta prueba es validar que el gráfico de entrevistas aparezca después
+                                    del login.
+                                </p>
+                                <p><strong>Pasos: </strong></p>
+                                <li>Validar presencia del texto "Entrevistas los últimos 12 meses".</li>
+                                <li>Validar la presencia del gráfico con la información.</li>
+                                <p><strong>Resultado esperado: </strong>El gráfico y texto aparecen correctamente.</p>
+                            </section>
+                        </div>
+                    </article>
+
+                    <!-- Card Postulantes -->
+                    <article class="col-6 mb-4">
+                        <div class="card rounded" style="background-color: #54595f; color: white;">
+                            <header class="card-body">
+                                <h5 class="card-title">Modulo Postulantes</h5>
+                            </header>
+                            <section class="card-body">
+                                <p class="card-text">
+                                    El objetivo de esta prueba es realizar las operaciones CRUD en el módulo de
+                                    postulantes.
+                                </p>
+                                <p><strong>Pasos:</strong></p>
+                                <li>Clic en "Postulantes".</li>
+                                <li>Crear un postulante con datos válidos.</li>
+                                <li>Realizar una búsqueda por nombre y verificar resultados.</li>
+                                <li>Editar los datos del postulante creado.</li>
+                                <li>Verificar mensajes de error en campos en blanco.</li>
+                                <li>Eliminar el postulante y verificar que aparezca en la lista.</li>
+                                <p><strong>Resultado esperado: </strong> Todas las acciones CRUD funcionan de manera
+                                    correcta.</p>
+                            </section>
+                        </div>
+                    </article>
+
+                    <!-- Card Procesos -->
+                    <article class="col-6 mb-4">
+                        <div class="card rounded" style="background-color: #54595f; color: white;">
+                            <header class="card-body">
+                                <h5 class="card-title">Módulo Procesos</h5>
+                            </header>
+                            <section class="card-body">
+                                <p class="card-text">
+                                    El objetivo de esta prueba es verificar la funcionalidad de búsqueda por Rol en el
+                                    módulo de procesos.
+                                </p>
+                                <p><strong>Pasos:</strong></p>
+                                <ul>
+                                    <li>Clic en "Procesos".</li>
+                                    <li>Realizar una búsqueda por Rol.</li>
+                                </ul>
+                                <p><strong>Resultado esperado: </strong>La búsqueda muestra los resultados esperados.
+                                </p>
+                            </section>
+                        </div>
+                    </article>
+
+                    <!-- Card Entrevistas -->
+                    <article class="col-6 mb-4">
+                        <div class="card rounded" style="background-color: #54595f; color: white;">
+                            <header class="card-body">
+                                <h5 class="card-title">Módulo Entrevistas</h5>
+                            </header>
+                            <section class="card-body">
+                                <p class="card-text">
+                                    El objetivo de esta prueba es validar la búsqueda de entrevistas por Célula.
+                                </p>
+                                <p><strong>Pasos:</strong></p>
+                                <ul>
+                                    <li>Clic en "Entrevistas".</li>
+                                    <li>Realizar búsqueda por Célula.</li>
+                                </ul>
+                                <p><strong>Resultado esperado: </strong>La búsqueda retorna los datos correctos.</p>
+                            </section>
+                        </div>
+                    </article>
+
+                    <!-- Card Roles -->
+                    <article class="col-6 mb-4">
+                        <div class="card rounded" style="background-color: #54595f; color: white;">
+                            <header class="card-body">
+                                <h5 class="card-title">Módulo Roles</h5>
+                            </header>
+                            <section class="card-body">
+                                <p class="card-text">
+                                    El objetivo de esta prueba es validar las operaciones CRUD en Roles.
+                                </p>
+                                <p><strong>Pasos:</strong></p>
+                                <ul>
+                                    <li>Acceder a "Roles" en "Mantenedores".</li>
+                                    <li>Crear, seleccionar y eliminar roles.</li>
+                                    <li>Verificar mensajes de error en campos en blanco al crear o editar roles.</li>
+                                </ul>
+                                <p><strong>Resultado esperado: </strong>Las operaciones CRUD funcionan correctamente y
+                                    los mensajes de error se muestran cuando los campos están en blanco.</p>
+                            </section>
+                        </div>
+                    </article>
+
+                    <!-- Card Preguntas -->
+                    <article class="col-6 mb-4">
+                        <div class="card rounded" style="background-color: #54595f; color: white;">
+                            <header class="card-body">
+                                <h5 class="card-title">Módulo Preguntas</h5>
+                            </header>
+                            <section class="card-body">
+                                <p class="card-text">
+                                    El objetivo de esta prueba es validar las operaciones CRUD en Preguntas.
+                                </p>
+                                <p><strong>Pasos:</strong></p>
+                                <ul>
+                                    <li>Crear, editar y borrar preguntas en el submódulo.</li>
+                                    <li>Verificar mensajes de error en campos en blanco al crear o editar preguntas.
+                                    </li>
+                                </ul>
+                                <p><strong>Resultado esperado: </strong>Las operaciones CRUD funcionan correctamente y
+                                    los mensajes de error se muestran cuando los campos están en blanco.</p>
+                            </section>
+                        </div>
+                    </article>
+
+                    <!-- Card Usuarios -->
+                    <article class="col-6 mb-4">
+                        <div class="card rounded" style="background-color: #54595f; color: white;">
+                            <header class="card-body">
+                                <h5 class="card-title">Módulo Usuarios</h5>
+                            </header>
+                            <section class="card-body">
+                                <p class="card-text">
+                                    El objetivo de esta prueba es validar las operaciones CRUD en Usuarios.
+                                </p>
+                                <p><strong>Pasos:</strong></p>
+                                <ul>
+                                    <li>Crear, editar y eliminar usuarios.</li>
+                                    <li>Verificar mensajes de error en campos en blanco al crear o editar usuarios.</li>
+                                </ul>
+                                <p><strong>Resultado esperado: </strong>Las operaciones CRUD funcionan correctamente y
+                                    los mensajes de error se muestran cuando los campos están en blanco.</p>
+                            </section>
+                        </div>
+                    </article>
+
+                    <!-- Card Clientes -->
+                    <article class="col-6 mb-4">
+                        <div class="card rounded" style="background-color: #54595f; color: white;">
+                            <header class="card-body">
+                                <h5 class="card-title">Módulo Clientes</h5>
+                            </header>
+                            <section class="card-body">
+                                <p class="card-text">
+                                    El objetivo de esta prueba es validar las operaciones CRUD en Clientes.
+                                </p>
+                                <p><strong>Pasos:</strong></p>
+                                <ul>
+                                    <li>Crear, editar y eliminar clientes.</li>
+                                    <li>Verificar mensajes de error en campos en blanco al crear o editar clientes.</li>
+                                </ul>
+                                <p><strong>Resultado esperado: </strong>Las operaciones CRUD funcionan correctamente y
+                                    los mensajes de error se muestran cuando los campos están en blanco.</p>
+                            </section>
+                        </div>
+                    </article>
+
+                    <!-- Card Células -->
+                    <article class="col-6 mb-4">
+                        <div class="card rounded" style="background-color: #54595f; color: white;">
+                            <header class="card-body">
+                                <h5 class="card-title">Módulo Células</h5>
+                            </header>
+                            <section class="card-body">
+                                <p class="card-text">
+                                    El objetivo de esta prueba es validar las operaciones CRUD en Células.
+                                </p>
+                                <p><strong>Pasos:</strong></p>
+                                <ul>
+                                    <li>Crear, editar y eliminar células.</li>
+                                    <li>Verificar mensajes de error en campos en blanco al crear o editar células.</li>
+                                </ul>
+                                <p><strong>Resultado esperado: </strong>Las operaciones CRUD funcionan correctamente y
+                                    los mensajes de error se muestran cuando los campos están en blanco.</p>
+                            </section>
+                        </div>
+                    </article>
+
+                    <!-- Card Cerrar Sesión -->
+                    <article class="col-6 mb-4">
+                        <div class="card rounded" style="background-color: #54595f; color: white;">
+                            <header class="card-body">
+                                <h5 class="card-title">Cerrar Sesión</h5>
+                            </header>
+                            <section class="card-body">
+                                <p class="card-text">
+                                    El objetivo de esta prueba es validar que al cerrar sesión se redirija correctamente
+                                    a la ventana de login.
+                                </p>
+                                <p><strong>Pasos:</strong></p>
+                                <ul>
+                                    <li>Hacer clic en "Cerrar sesión".</li>
+                                </ul>
+                                <p><strong>Resultado esperado: </strong>Se muestra la ventana de login nuevamente.</p>
+                            </section>
+                        </div>
+                    </article>
+
+
+                </div>
+            </div>
+
         </div>
-    
+
         <!-- Footer Start -->
         <footer class="container-fluid bg-dark text-white mt-5 py-4">
             <div class="row px-xl-5">
@@ -119,7 +353,7 @@
                     <p class="mb-1">Sebastián González Orellana</p>
                     <small>QA Funcional 3IT</small>
                 </div>
-    
+
                 <!-- Información del Diseñador -->
                 <div class="col-lg-6 col-md-12 d-flex justify-content-lg-end justify-content-center align-items-center">
                     <p class="mb-0 text-white">
@@ -131,7 +365,7 @@
         </footer>
         <!-- Footer End -->
     </div>
-    
+
     <!-- Bootstrap JS y Popper -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>

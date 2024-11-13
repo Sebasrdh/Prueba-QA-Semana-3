@@ -74,42 +74,167 @@
             <header class="banner text-center text-dark">
                 <h1>Estructura/Formato para registrar los casos de pruebas web</h1>
             </header>
-        
-        
-            <section class="container d-flex justify-content-center align-items-center gap-3 mt-3">
-                <!-- Card Semana 3 -->
-                <article class="col-6">
-                    <figure class="card position-relative text-center" style="height: 430px; overflow: hidden;">
-                        <img class="position-absolute top-50 start-50 translate-middle w-100 h-100" src="img/QA_question1.jpg"
-                            alt="Imagen de Semana 3" style="object-fit: cover;">
-                        <figcaption
-                            class="d-flex flex-column align-items-center justify-content-center position-absolute top-50 start-50 translate-middle"
-                            style="padding: 20px; max-width: 80%; background-color: rgba(0, 0, 0, 0.5);">
-                            <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Semana 3</h1>
-                            <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp"
-                                href="intro_S3.html">Ver más</a>
-                        </figcaption>
-                    </figure>
-                </article>
-        
-                <!-- Card Semana 4 -->
-                <article class="col-6">
-                    <figure class="card position-relative text-center" style="height: 430px; overflow: hidden;">
-                        <img class="position-absolute top-50 start-50 translate-middle w-100 h-100" src="img/QA_question1.jpg"
-                            alt="Imagen de Semana 4" style="object-fit: cover;">
-                        <figcaption
-                            class="d-flex flex-column align-items-center justify-content-center position-absolute top-50 start-50 translate-middle"
-                            style="padding: 20px; max-width: 80%; background-color: rgba(0, 0, 0, 0.5);">
-                            <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Semana 4 (Aún no
-                                disponible)</h1>
-                            <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="">Ver
-                                más</a>
-                        </figcaption>
-                    </figure>
-                </article>
-            </section>
+            <table class="table table-bordered mt-4">
+                <tbody>
+                    <table class="table table-bordered mt-4">
+                        <thead>
+                            <tr>
+                                <th>ID del Caso de Prueba</th>
+                                <th>Título</th>
+                                <th>Descripción</th>
+                                <th>Precondiciones</th>
+                                <th>Datos de Prueba</th>
+                                <th>Pasos</th>
+                                <th>Resultado Esperado</th>
+                                <th>Resultado Obtenido</th>
+                                <th>Estado</th>
+                                <th>Observaciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CP-001</td>
+                                <td>Login</td>
+                                <td>Valida el inicio de sesión con credenciales correctas.</td>
+                                <td>Página de login accesible</td>
+                                <td>Usuario: user, Contraseña: password</td>
+                                <td>1. Acceder a la página de login <br> 2. Ingresar credenciales <br> 3. Hacer clic en
+                                    "Login"</td>
+                                <td>Inicio de sesión exitoso y visualización de la Homepage.</td>
+                                <td>-</td>
+                                <td>Pendiente</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>CP-002</td>
+                                <td>Validación de Gráfico</td>
+                                <td>Valida que el gráfico de entrevistas aparezca después del login.</td>
+                                <td>Usuario autenticado</td>
+                                <td>-</td>
+                                <td>1. Validar presencia del texto "Entrevistas los últimos 12 meses" <br> 2. Verificar
+                                    gráfico</td>
+                                <td>El gráfico y texto aparecen correctamente.</td>
+                                <td>-</td>
+                                <td>Pendiente</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>CP-003</td>
+                                <td>Módulo Postulantes</td>
+                                <td>Realiza operaciones CRUD en el módulo de postulantes.</td>
+                                <td>Usuario autenticado</td>
+                                <td>Datos válidos de un postulante</td>
+                                <td>1. Clic en "Postulantes" <br> 2. Crear, buscar, editar y eliminar postulante</td>
+                                <td>Operaciones CRUD exitosas.</td>
+                                <td>-</td>
+                                <td>Pendiente</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>CP-004</td>
+                                <td>Módulo Clientes</td>
+                                <td>Realiza operaciones CRUD en el módulo de clientes.</td>
+                                <td>Usuario autenticado</td>
+                                <td>Datos válidos de un cliente</td>
+                                <td>1. Clic en "Clientes" <br> 2. Crear, buscar, editar y eliminar cliente</td>
+                                <td>Operaciones CRUD exitosas.</td>
+                                <td>-</td>
+                                <td>Pendiente</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>CP-005</td>
+                                <td>Módulo Células</td>
+                                <td>Realiza operaciones CRUD en el módulo de células.</td>
+                                <td>Usuario autenticado</td>
+                                <td>Datos válidos de una célula</td>
+                                <td>1. Clic en "Células" <br> 2. Crear, buscar, editar y eliminar célula</td>
+                                <td>Operaciones CRUD exitosas.</td>
+                                <td>-</td>
+                                <td>Pendiente</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>CP-006</td>
+                                <td>Módulo Roles</td>
+                                <td>Realiza operaciones CRUD en el módulo de roles.</td>
+                                <td>Usuario autenticado</td>
+                                <td>Datos válidos de un rol</td>
+                                <td>1. Clic en "Roles" <br> 2. Crear, buscar, editar y eliminar rol</td>
+                                <td>Operaciones CRUD exitosas.</td>
+                                <td>-</td>
+                                <td>Pendiente</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>CP-007</td>
+                                <td>Módulo Procesos</td>
+                                <td>Realiza operaciones CRUD en el módulo de procesos.</td>
+                                <td>Usuario autenticado</td>
+                                <td>Datos válidos de un proceso</td>
+                                <td>1. Clic en "Procesos" <br> 2. Crear, buscar, editar y eliminar proceso</td>
+                                <td>Operaciones CRUD exitosas.</td>
+                                <td>-</td>
+                                <td>Pendiente</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>CP-008</td>
+                                <td>Módulo Etapas</td>
+                                <td>Realiza operaciones CRUD en el módulo de etapas.</td>
+                                <td>Usuario autenticado</td>
+                                <td>Datos válidos de una etapa</td>
+                                <td>1. Clic en "Etapas" <br> 2. Crear, buscar, editar y eliminar etapa</td>
+                                <td>Operaciones CRUD exitosas.</td>
+                                <td>-</td>
+                                <td>Pendiente</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>CP-009</td>
+                                <td>Módulo Usuarios</td>
+                                <td>Realiza operaciones CRUD en el módulo de usuarios.</td>
+                                <td>Usuario autenticado</td>
+                                <td>Datos válidos de un usuario</td>
+                                <td>1. Clic en "Usuarios" <br> 2. Crear, buscar, editar y eliminar usuario</td>
+                                <td>Operaciones CRUD exitosas.</td>
+                                <td>-</td>
+                                <td>Pendiente</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>CP-010</td>
+                                <td>Consulta por Fecha</td>
+                                <td>Valida la consulta de postulantes por rango de fechas.</td>
+                                <td>Usuario autenticado</td>
+                                <td>Rango de fechas</td>
+                                <td>1. Especificar rango de fechas <br> 2. Realizar consulta</td>
+                                <td>Se devuelven los postulantes dentro del rango de fechas.</td>
+                                <td>-</td>
+                                <td>Pendiente</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>CP-011</td>
+                                <td>Reporte de Estadísticas</td>
+                                <td>Valida la generación de reportes de estadísticas de entrevistas.</td>
+                                <td>Usuario autenticado</td>
+                                <td>Intervalo de tiempo</td>
+                                <td>1. Seleccionar intervalo de tiempo <br> 2. Generar reporte</td>
+                                <td>El reporte muestra estadísticas de entrevistas en el intervalo.</td>
+                                <td>-</td>
+                                <td>Pendiente</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </tbody>
+            </table>
+
+
         </div>
-    
+
         <!-- Footer Start -->
         <footer class="container-fluid bg-dark text-white mt-5 py-4">
             <div class="row px-xl-5">
@@ -119,7 +244,7 @@
                     <p class="mb-1">Sebastián González Orellana</p>
                     <small>QA Funcional 3IT</small>
                 </div>
-    
+
                 <!-- Información del Diseñador -->
                 <div class="col-lg-6 col-md-12 d-flex justify-content-lg-end justify-content-center align-items-center">
                     <p class="mb-0 text-white">
@@ -131,7 +256,7 @@
         </footer>
         <!-- Footer End -->
     </div>
-    
+
     <!-- Bootstrap JS y Popper -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
