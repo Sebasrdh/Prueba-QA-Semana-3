@@ -90,196 +90,114 @@
             <div class="container">
                 <div class="row">
 
-                    <!-- Card Capacitación -->
+                    <!-- Card LoginTest -->
                     <article class="col-6 mb-4">
-                        <div class="card rounded" style="background-color: azure;">
+                        <div class="card rounded text-white" style="background-color: #54595f;">
                             <header class="card-body">
-                                <h5 class="card-title">Conclusión - Capacitación</h5>
+                                <h5 class="card-title">Conclusiones de LoginTest</h5>
                             </header>
                             <section class="card-body">
                                 <p class="card-text">
-                                    Al realizar pruebas en este Endpoint se logra detectar que en los siguientes request
-                                    no figura error:
+                                    <strong>Configuración y Término de Sesión: </strong>El método setup y tearDown
+                                    aseguran que el entorno de prueba esté correctamente inicializado antes de cada
+                                    prueba y limpiado después.
                                 </p>
-                                <li><strong>DELETE:</strong> Al intentar realizar una solicitud DELETE para eliminar una
-                                    Capacitación con un ID erróneo, la operación se ejecuta sin generar un error. Esto
-                                    debería generar un error indicando que el ID proporcionado no es válido o no existe
-                                    en el sistema.</li>
+                                <p class="card-text">
+                                    <strong>Funcionalidad de Inicio de Sesión: </strong>La prueba principal llamada
+                                    iniciodeSesion verifica que el proceso de inicio de sesión funcione de acuerdo a los
+                                    requisitos establecidos, incluyendo la correcta validación de credenciales.
+                                </p>
                             </section>
                         </div>
                     </article>
 
-                    <!-- Card Usuario -->
+                    <!-- Card GraphicTest -->
                     <article class="col-6 mb-4">
-                        <div class="card rounded" style="background-color: azure;">
+                        <div class="card rounded text-white" style="background-color: #54595f;">
                             <header class="card-body">
-                                <h5 class="card-title">Conclusión - Usuario</h5>
+                                <h5 class="card-title">Conclusiones de GraphicTest</h5>
                             </header>
                             <section class="card-body">
                                 <p class="card-text">
-                                    Al realizar pruebas en este Endpoint se logra detectar que en los siguientes request
-                                    no figura error:
+                                    <strong>Validación de Componentes Visuales: </strong>La prueba llamada
+                                    graficovisible se focaliza en validar que los gráficos y textos en la pantalla sean
+                                    visibles y se desplieguen correctamente. Esta prueba asegura que la interfaz gráfica
+                                    del usuario sea intuitiva y funcional.
                                 </p>
-                                <li><strong>DELETE:</strong> Al intentar realizar una solicitud DELETE para eliminar un
-                                    Usuario con un ID erróneo, la operación se ejecuta sin generar un error. Esto
-                                    debería generar un error indicando que el ID proporcionado no es válido o no existe
-                                    en el sistema.</li>
+                                <p class="card-text">
+                                    <strong>Configuración y Desmontaje: </strong>Similar a las demás pruebas, los
+                                    métodos setup y tearDown son vitales para preparar y limpiar el entorno de prueba
+                                    respectivamente.
+                                </p>
                             </section>
                         </div>
                     </article>
 
-                    <!-- Card Tritiano -->
+                    <!-- Card UserTest -->
                     <article class="col-6 mb-4">
-                        <div class="card rounded" style="background-color: azure;">
+                        <div class="card rounded text-white" style="background-color: #54595f;">
                             <header class="card-body">
-                                <h5 class="card-title">Conclusión - Tritiano</h5>
+                                <h5 class="card-title">Conclusiones de UserTest</h5>
                             </header>
                             <section class="card-body">
                                 <p class="card-text">
-                                    Al realizar pruebas en este Endpoint se logra detectar que en los siguientes request
-                                    no figura error:
+                                    <strong>Creación de Usuario: </strong>La prueba userspage valida que la
+                                    funcionalidad para crear un nuevo usuario opere sin errores e introduce
+                                    correctamente los datos.
                                 </p>
-                                <li><strong>PUT: </strong>Al ingresar un ID inexistente, la solicitud sigue realizando
-                                    la actualización de datos, cuando debería generar un error por no especificar un ID
-                                    válido de Tritiano. </li>
-                                <li><strong>DELETE:</strong> Al intentar realizar una solicitud DELETE para eliminar un
-                                    Tritiano con un ID erróneo, la operación se ejecuta sin generar un error. Esto
-                                    debería generar un error indicando que el ID proporcionado no es válido o no existe
-                                    en el sistema.</li>
+                                <p class="card-text">
+                                    <strong>Validación de Campos Vacíos: </strong>La prueba validateErrorOnEmptyFields
+                                    asegura que los campos obligatorios de los formularios muestren mensajes de error
+                                    adecuados cuando se dejan vacíos.
+                                </p>
+                                <p class="card-text">
+                                    <strong>Edición y Eliminación de Usuario: </strong>Las pruebas editUser y
+                                    deleteUser aseguran que las funcionalidades de editar y eliminar usuarios funcionen
+                                    correctamente, permitiendo la administración adecuada de los datos del usuario.
+                                </p>
                             </section>
                         </div>
                     </article>
 
-                    <!-- Card Célula -->
+                    <!-- Card LogoutTest -->
                     <article class="col-6 mb-4">
-                        <div class="card rounded" style="background-color: azure;">
+                        <div class="card rounded text-white" style="background-color: #54595f;">
                             <header class="card-body">
-                                <h5 class="card-title">Conclusión - Célula</h5>
+                                <h5 class="card-title">Conclusiones de LogoutTest</h5>
                             </header>
                             <section class="card-body">
                                 <p class="card-text">
-                                    Al realizar pruebas en este Endpoint se logra detectar que en los siguientes request
-                                    no figura error:
+                                    <strong>Cierre de Sesión: </strong>La prueba testLogout comprueba que el proceso
+                                    de cerrar sesión funciona correctamente, y que al hacerlo, la pantalla de inicio de
+                                    sesión se muestra como se espera.
                                 </p>
-                                <li><strong>POST: </strong> Al dejar el campo de nombre vacío, la creación de la Célula
-                                    se completa de todas formas, cuando debería mostrar un mensaje de error indicando la
-                                    falta de datos.</li>
-                                <li><strong>PUT: </strong>Al ingresar un ID inexistente, la solicitud sigue realizando
-                                    la actualización de datos, cuando debería generar un error por no especificar un ID
-                                    válido de una Célula. </li>
-                                <li><strong>DELETE: </strong> Al intentar eliminar una Célula con un ID inexistente, la
-                                    acción se completa cuando debería mostrar un error indicando que el ID no existe.
-                                </li>
+                                <p class="card-text">
+                                    <strong>Fiabilidad del Sistema: </strong>Esta prueba ayuda a asegurar que los
+                                    usuarios puedan finalizar su sesión de manera segura, protegiendo así la información
+                                    de la cuenta.
+                                </p>
                             </section>
                         </div>
                     </article>
 
-                    <!-- Card Postulante -->
-                    <article class="col-6 mb-4">
-                        <div class="card rounded" style="background-color: azure;">
-                            <header class="card-body">
-                                <h5 class="card-title">Conclusión - Postulante</h5>
-                            </header>
-                            <section class="card-body">
-                                <p class="card-text">
-                                    Al realizar pruebas en este Endpoint se logra detectar que en los siguientes request
-                                    no figura error:
-                                </p>
-                                <li><strong>POST: </strong> Al intentar crear un Postulante sin ingresar datos, debería
-                                    generarse un error; sin embargo, la creación se realiza de todas formas, sin los
-                                    datos necesarios.</li>
-                                <li><strong>PUT: </strong> Se realiza una actualización sin ingresar ningún dato, cuando
-                                    debería generarse un error debido a la falta de información.</li>
-                                <li><strong>DELETE: </strong>Al intentar eliminar un Postulante con un ID inválido, la
-                                    acción se realiza correctamente, cuando no debería ser posible debido a que se está
-                                    utilizando un ID inexistente. </li>
-                            </section>
-                        </div>
-                    </article>
 
-                    <!-- Card Cliente -->
-                    <article class="col-6 mb-4">
-                        <div class="card rounded" style="background-color: azure;">
-                            <header class="card-body">
-                                <h5 class="card-title">Conclusión - Cliente</h5>
-                            </header>
-                            <section class="card-body">
-                                <p class="card-text">
-                                    Al realizar pruebas en este Endpoint se logra detectar que en los siguientes request
-                                    no figura error:
-                                </p>
-                                <li><strong>PUT: </strong> Al realizar una solicitud PUT para el Cliente con un ID
-                                    erróneo, la operación se ejecuta sin generar un error. Sin embargo, debería
-                                    mostrarse un error indicando que el ID es inválido. En cambio, se genera un error
-                                    únicamente cuando faltan datos en el cuerpo de la solicitud.</li>
-                                <li><strong>DELETE: </strong> Al intentar eliminar un Cliente utilizando un ID inválido
-                                    mediante una solicitud DELETE, la acción se realiza sin generar ningún error. Esto
-                                    debería generar un error indicando que el ID no existe en el sistema, ya que no se
-                                    puede eliminar un Cliente con un ID inválido.</li>
-                            </section>
-                        </div>
-                    </article>
 
-                    <!-- Card Rol -->
-                    <article class="col-6 mb-4">
-                        <div class="card rounded" style="background-color: azure;">
-                            <header class="card-body">
-                                <h5 class="card-title">Conclusión - Rol</h5>
-                            </header>
-                            <section class="card-body">
-                                <p class="card-text">
-                                    Al realizar pruebas en este Endpoint se logra detectar que en los siguientes request
-                                    no figura error:
-                                </p>
-                                <li><strong>POST: </strong> Al intentar realizar una solicitud POST para crear un Rol
-                                    sin proporcionar datos en el campo 'detalle', la operación se ejecuta sin generar un
-                                    error. Sin embargo, debería mostrarse un mensaje de error indicando que el campo
-                                    'detalle' es obligatorio.</li>
-                                <li><strong>PUT: </strong>En la operación PUT para actualizar un Rol, no se genera un
-                                    error al utilizar un ID erróneo, ni tampoco se genera un error cuando faltan datos
-                                    en la solicitud. Debería generarse un error en ambos casos: uno por un ID inválido y
-                                    otro por la falta de datos requeridos.</li>
-                            </section>
-                        </div>
-                    </article>
-
-                    <!-- Card Proceso -->
-                    <article class="col-6 mb-4">
-                        <div class="card rounded" style="background-color: azure;">
-                            <header class="card-body">
-                                <h5 class="card-title">Conclusión - Proceso</h5>
-                            </header>
-                            <section class="card-body">
-                                <p class="card-text">
-                                    Al realizar pruebas en este Endpoint se logra detectar que en los siguientes request
-                                    no figura error:
-                                </p>
-                                <li><strong>DELETE: </strong>Al intentar realizar una solicitud DELETE para eliminar un
-                                    Proceso con un ID erróneo, la operación se ejecuta sin generar un error. Esto
-                                    debería generar un error indicando que el ID proporcionado no es válido o no existe
-                                    en el sistema.</li>
-                            </section>
-                        </div>
-                    </article>
 
                     <!-- Card de Recomendaciones -->
                     <article class="col-12 mb-4">
-                        <div class="card rounded" style="background-color: azure;">
+                        <div class="card rounded text-white" style="background-color: #54595f;">
                             <header class="card-body">
                                 <h5 class="card-title">Recomendaciones para el Desarrollador</h5>
                             </header>
                             <footer class="card-body">
                                 <p class="card-text">
-                                    Se sugiere implementar una validación más robusta en todos los endpoints de la API
-                                    para garantizar que los datos ingresados sean correctos y completos antes de
-                                    proceder con las operaciones. Es importante que el sistema devuelva un error claro y
-                                    comprensible cuando se envíen datos inválidos o faltantes, especialmente en las
-                                    solicitudes POST, PUT y DELETE. Además, se debe verificar que los ID proporcionados
-                                    sean válidos y existan en la base de datos antes de permitir cualquier operación.
+                                    Se sugiere implementar el uso de identificadores (ID) para referenciar cada objeto
+                                    de manera correcta y consistente en todas las pruebas automatizadas. Los selectores
+                                    basados en XPath son propensos a romperse cuando hay cambios en la estructura del
+                                    DOM, lo que puede ocurrir con frecuencia durante el mantenimiento o actualización de
+                                    la interfaz de usuario. Utilizar ID únicos y estables hará que las pruebas sean más
+                                    robustas y resilientes a estos cambios.
                                 </p>
-                                <p>Las solicitudes DELETE y PUT deben devolver un error si el ID proporcionado no
-                                    existe en la base de datos, en lugar de permitir la operación sin validaciones.</p>
-
                             </footer>
                         </div>
                     </article>
